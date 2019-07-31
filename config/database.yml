@@ -1,0 +1,17 @@
+default: &defaults
+  adapter: mysql2
+  encoding: utf8
+  username: root
+  password: admin
+  host: 127.0.0.1
+  pool: 10
+  reconnect: true
+development:
+  <<: *defaults
+  database: sina_ly_development
+test:
+  <<: *defaults
+  database: sina_ly_test
+production:
+  <<: *defaults
+  database: sina_ly_production
