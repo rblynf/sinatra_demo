@@ -10,11 +10,13 @@ gem 'mysql2'
 
 gem 'pry', require: false
 
+gem 'activerecord', '~> 5.2'
 gem 'sinatra-activerecord'
 
 gem 'sinatra-contrib'
 
 gem 'sinatra-logger'
 
-# gem 'awesome_print'
+gem 'awesome_print'
 
+gem 'sinatra-param'
