@@ -21,40 +21,39 @@ module Ly
     helpers AppHelper
 
     before do
-      ActiveRecord::Base.logger = logger
+      # ActiveRecord::Base.logger = logger
       get_body_raw if %w[POST].include?(request.request_method)
       pickup_params
     end
-
-    set :environments, %w[test development production]
-    set :bind,         '0.0.0.0'
 
 		get '/' do
 		  'Hello world!'
 		end
 
     post '/book/create' do
-      # required :_id, :name, :descript, :type
-			required :name, :type
+      # required :_id, :name, :descript, :remark
+			required :name, :descript
       Book.create_by(params)
-
       halt 204
     end
 
    	get '/book/show' do
-      # required :_id, :name, :descript, :type
 			required :id
-      book = Book.find_by_id(params[:id].to_i)
-
-      halt 204
+      p book = Book.find_by_id(params[:id].to_i)
+      # halt 204
     end
 
     not_found do
       status 404
+      #输出到控制台console及log日志文件
+      logger.info "page not found}" 
+      #记录到表中
+      # AppLog.warn("page not found") #
   		"page not found"
     end
 
 		error do
+			logger.info "error: #{env['sinatra.error'].message}" 
 		  'Sorry there was a error - ' + env['sinatra.error'].messageend
 		end
 

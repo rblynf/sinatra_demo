@@ -1513,3 +1513,724 @@ Did you mean?  require:
 2019-07-31 07:43:04.954459 [36mI[0m [51354:47285684681060] [36mLy::App[0m --  => {}
 2019-07-31 07:43:04.959876 [36mI[0m [51354:47285684681060] [36mAccess[0m -- 127.0.0.1 - - [31/Jul/2019:07:43:04 -0700] "GET /__sinatra__/500.png HTTP/1.1" 304 - 0.0062
 
+2019-07-31 18:51:37.482501 [36mI[0m [6210:46917832350060] [36mLy::App[0m --  => {}
+2019-07-31 18:51:37.484306 [36mI[0m [6210:46917832350060] [36mAccess[0m -- 127.0.0.1 - - [31/Jul/2019:18:51:37 -0700] "GET / HTTP/1.1" 200 12 0.0070
+
+2019-07-31 18:51:46.628035 [36mI[0m [6210:46917832350060] [36mLy::App[0m --  => {}
+2019-07-31 18:51:46.629116 [36mI[0m [6210:46917832350060] [36mAccess[0m -- 127.0.0.1 - - [31/Jul/2019:18:51:46 -0700] "GET /book HTTP/1.1" 404 14 0.0020
+
+2019-07-31 18:52:22.479885 [36mI[0m [6210:46917832350060] [36mLy::App[0m --  => {"id"=>"1"}
+2019-07-31 18:52:22.479950 [36mI[0m [6210:46917832350060] [36mLy::App[0m -- { "id"[0;37m => [0m[0;33m"1"[0m }
+2019-07-31 18:52:22.583973 [31mE[0m [6210:46917832350060 logger.rb:12] [31mError[0m -- 2019-07-31 18:52:22 - ActiveRecord::SubclassNotFound - The single-table inheritance mechanism failed to locate the subclass: 'kh'. This error is raised because the column 'type' is reserved for storing the class in case of inheritance. Please rename this column if you didn't intend it to be used for storing the inheritance class or overwrite Ly::Book.inheritance_column to use another column for that information.:
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/inheritance.rb:226:in `rescue in find_sti_class'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/inheritance.rb:219:in `find_sti_class'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/inheritance.rb:207:in `discriminate_class_for_record'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/persistence.rb:69:in `instantiate'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/querying.rb:52:in `block (2 levels) in find_by_sql'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/result.rb:57:in `block in each'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/result.rb:57:in `each'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/result.rb:57:in `each'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/querying.rb:52:in `map'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/querying.rb:52:in `block in find_by_sql'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/querying.rb:51:in `find_by_sql'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/statement_cache.rb:108:in `execute'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/core.rb:208:in `find_by'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/dynamic_matchers.rb:66:in `find_by_id'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/dynamic_matchers.rb:20:in `method_missing'
+	/home/liyun/www/sinatra_demo/app.rb:47:in `block in <class:App>'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1635:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1635:in `block in compile!'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:992:in `block (3 levels) in route!'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1011:in `route_eval'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:992:in `block (2 levels) in route!'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1040:in `block in process_route'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1038:in `catch'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1038:in `process_route'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:990:in `block in route!'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:989:in `each'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:989:in `route!'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1097:in `block in dispatch!'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `block in invoke'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `catch'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `invoke'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1094:in `dispatch!'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:924:in `block in call!'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `block in invoke'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `catch'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `invoke'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:924:in `call!'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:913:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/rack-2.0.7/lib/rack/common_logger.rb:33:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:231:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/rack-protection-2.0.5/lib/rack/protection/xss_header.rb:18:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/rack-protection-2.0.5/lib/rack/protection/path_traversal.rb:16:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/rack-protection-2.0.5/lib/rack/protection/json_csrf.rb:26:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/rack-protection-2.0.5/lib/rack/protection/base.rb:50:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/rack-protection-2.0.5/lib/rack/protection/base.rb:50:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/rack-protection-2.0.5/lib/rack/protection/frame_options.rb:31:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/rack-2.0.7/lib/rack/logger.rb:15:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/rack-2.0.7/lib/rack/common_logger.rb:33:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:231:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:224:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/rack-2.0.7/lib/rack/head.rb:12:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/show_exceptions.rb:22:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:194:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1957:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1502:in `block in call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1729:in `synchronize'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1502:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/lib/thin/connection.rb:86:in `block in pre_process'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/lib/thin/connection.rb:84:in `catch'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/lib/thin/connection.rb:84:in `pre_process'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/lib/thin/connection.rb:53:in `process'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/lib/thin/connection.rb:39:in `receive_data'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/eventmachine-1.2.7/lib/eventmachine.rb:195:in `run_machine'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/eventmachine-1.2.7/lib/eventmachine.rb:195:in `run'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/lib/thin/backends/base.rb:73:in `start'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/lib/thin/server.rb:162:in `start'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/lib/thin/controllers/controller.rb:87:in `start'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/lib/thin/runner.rb:203:in `run_command'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/lib/thin/runner.rb:159:in `run!'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/bin/thin:6:in `<top (required)>'
+	/home/liyun/.rbenv/versions/2.6.1/bin/thin:23:in `load'
+	/home/liyun/.rbenv/versions/2.6.1/bin/thin:23:in `<main>'
+2019-07-31 18:52:22.732870 [36mI[0m [6210:46917832350060] [36mLy::App[0m --  => {}
+2019-07-31 18:52:22.735220 [36mI[0m [6210:46917832350060] [36mAccess[0m -- 127.0.0.1 - - [31/Jul/2019:18:52:22 -0700] "GET /__sinatra__/500.png HTTP/1.1" 304 - 0.0027
+
+2019-07-31 18:54:37.066259 [36mI[0m [7083:47100669892960] [36mLy::App[0m --  => {}
+2019-07-31 18:54:37.069731 [1mW[0m [7083:47100669892960] [1mLy::App[0m -- warn： there is not found
+2019-07-31 18:54:37.070115 [36mI[0m [7083:47100669892960] [36mAccess[0m -- 127.0.0.1 - - [31/Jul/2019:18:54:37 -0700] "GET /book/ HTTP/1.1" 404 14 0.0106
+
+2019-07-31 18:55:39.492740 [36mI[0m [7221:47026539231580] [36mLy::App[0m --  => {}
+2019-07-31 18:55:39.494424 [1mW[0m [7221:47026539231580] [1mLy::App[0m -- warn： there is not found
+2019-07-31 18:55:39.494805 [36mI[0m [7221:47026539231580] [36mAccess[0m -- 127.0.0.1 - - [31/Jul/2019:18:55:39 -0700] "GET /book/ HTTP/1.1" 404 14 0.0054
+
+2019-07-31 18:55:40.655885 [36mI[0m [7221:47026539231580] [36mLy::App[0m --  => {}
+2019-07-31 18:55:40.655992 [1mW[0m [7221:47026539231580] [1mLy::App[0m -- warn： there is not found
+2019-07-31 18:55:40.656255 [36mI[0m [7221:47026539231580] [36mAccess[0m -- 127.0.0.1 - - [31/Jul/2019:18:55:40 -0700] "GET /book/ HTTP/1.1" 404 14 0.0007
+
+2019-07-31 18:56:46.453589 [36mI[0m [7353:47418691721580] [36mLy::App[0m --  => {}
+2019-07-31 18:56:46.454635 [1mW[0m [7353:47418691721580] [1mLy::App[0m -- warn： there is not found
+2019-07-31 18:56:46.455095 [36mI[0m [7353:47418691721580] [36mAccess[0m -- 127.0.0.1 - - [31/Jul/2019:18:56:46 -0700] "GET /book/ HTTP/1.1" 404 14 0.0047
+
+2019-07-31 18:56:48.015268 [36mI[0m [7353:47418691721580] [36mLy::App[0m --  => {}
+2019-07-31 18:56:48.015585 [1mW[0m [7353:47418691721580] [1mLy::App[0m -- warn： there is not found
+2019-07-31 18:56:48.016084 [36mI[0m [7353:47418691721580] [36mAccess[0m -- 127.0.0.1 - - [31/Jul/2019:18:56:48 -0700] "GET /book/ HTTP/1.1" 404 14 0.0015
+
+2019-07-31 19:03:23.002770 [36mI[0m [7567:47318683359580] [36mLy::App[0m --  => {}
+2019-07-31 19:03:23.004591 [36mI[0m [7567:47318683359580] [36mAccess[0m -- 127.0.0.1 - - [31/Jul/2019:19:03:23 -0700] "GET /book/ HTTP/1.1" 404 14 0.0098
+
+2019-07-31 19:03:32.271970 [36mI[0m [7567:47318683359580] [36mLy::App[0m --  => {"1"=>nil}
+2019-07-31 19:03:32.272320 [36mI[0m [7567:47318683359580] [36mAccess[0m -- 127.0.0.1 - - [31/Jul/2019:19:03:32 -0700] "GET /book/show?1 HTTP/1.1" 400 21 0.0008
+
+2019-07-31 19:05:00.042446 [36mI[0m [7567:47318683359580] [36mLy::App[0m --  => {"1"=>nil}
+2019-07-31 19:05:00.042910 [36mI[0m [7567:47318683359580] [36mAccess[0m -- 127.0.0.1 - - [31/Jul/2019:19:05:00 -0700] "GET /book/show?1 HTTP/1.1" 400 21 0.0468
+
+2019-07-31 19:08:59.735351 [36mI[0m [7766:47156484684140] [36mLy::App[0m --  => {}
+2019-07-31 19:08:59.738260 [36mI[0m [7766:47156484684140] [36mAccess[0m -- 192.168.221.1 - - [31/Jul/2019:19:08:59 -0700] "GET / HTTP/1.1" 200 12 0.0080
+
+2019-07-31 19:10:31.148145 [36mI[0m [7766:47156484684140] [36mLy::App[0m --  => {}
+2019-07-31 19:10:31.148866 [36mI[0m [7766:47156484684140] [36mAccess[0m -- 192.168.221.1 - - [31/Jul/2019:19:10:31 -0700] "GET /book HTTP/1.1" 404 14 0.0013
+
+2019-07-31 19:11:26.892042 [36mI[0m [8037:47322211875180] [36mLy::App[0m --  => {}
+2019-07-31 19:11:26.969900 [36mI[0m [8037:47322211875180] [36mAccess[0m -- 192.168.221.1 - - [31/Jul/2019:19:11:26 -0700] "GET /book HTTP/1.1" 404 14 0.0818
+
+2019-07-31 19:11:26.996601 [36mI[0m [8037:47322211875180] [36mLy::App[0m --  => {}
+2019-07-31 19:11:27.028267 [36mI[0m [8037:47322211875180] [36mAccess[0m -- 192.168.221.1 - - [31/Jul/2019:19:11:27 -0700] "GET /favicon.ico HTTP/1.1" 404 14 0.0321
+
+2019-07-31 19:14:57.738116 [36mI[0m [8037:47322211875180] [36mLy::App[0m --  => {"1"=>nil}
+2019-07-31 19:14:57.738582 [36mI[0m [8037:47322211875180] [36mAccess[0m -- 192.168.221.1 - - [31/Jul/2019:19:14:57 -0700] "GET /book/show?1 HTTP/1.1" 400 21 0.0501
+
+2019-07-31 19:15:28.285551 [36mI[0m [8868:47259974687080] [36mLy::App[0m --  => {"1"=>nil}
+2019-07-31 19:15:28.288020 [36mI[0m [8868:47259974687080] [36mAccess[0m -- 192.168.221.1 - - [31/Jul/2019:19:15:28 -0700] "GET /book/show?1 HTTP/1.1" 400 21 0.0061
+
+2019-07-31 19:15:55.974728 [36mI[0m [8868:47259974687080] [36mLy::App[0m --  => {"id"=>"1"}
+2019-07-31 19:15:55.974827 [36mI[0m [8868:47259974687080] [36mLy::App[0m -- { "id"[0;37m => [0m[0;33m"1"[0m }
+2019-07-31 19:15:55.995425 [31mE[0m [8868:47259974687080 logger.rb:12] [31mError[0m -- 2019-07-31 19:15:55 - ActiveRecord::SubclassNotFound - The single-table inheritance mechanism failed to locate the subclass: 'kh'. This error is raised because the column 'type' is reserved for storing the class in case of inheritance. Please rename this column if you didn't intend it to be used for storing the inheritance class or overwrite Ly::Book.inheritance_column to use another column for that information.:
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/inheritance.rb:226:in `rescue in find_sti_class'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/inheritance.rb:219:in `find_sti_class'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/inheritance.rb:207:in `discriminate_class_for_record'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/persistence.rb:69:in `instantiate'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/querying.rb:52:in `block (2 levels) in find_by_sql'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/result.rb:57:in `block in each'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/result.rb:57:in `each'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/result.rb:57:in `each'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/querying.rb:52:in `map'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/querying.rb:52:in `block in find_by_sql'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/querying.rb:51:in `find_by_sql'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/statement_cache.rb:108:in `execute'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/core.rb:208:in `find_by'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/dynamic_matchers.rb:66:in `find_by_id'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/dynamic_matchers.rb:20:in `method_missing'
+	/home/liyun/www/sinatra_demo/app.rb:47:in `block in <class:App>'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1635:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1635:in `block in compile!'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:992:in `block (3 levels) in route!'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1011:in `route_eval'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:992:in `block (2 levels) in route!'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1040:in `block in process_route'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1038:in `catch'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1038:in `process_route'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:990:in `block in route!'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:989:in `each'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:989:in `route!'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1097:in `block in dispatch!'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `block in invoke'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `catch'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `invoke'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1094:in `dispatch!'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:924:in `block in call!'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `block in invoke'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `catch'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `invoke'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:924:in `call!'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:913:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/rack-2.0.7/lib/rack/common_logger.rb:33:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:231:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/rack-protection-2.0.5/lib/rack/protection/xss_header.rb:18:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/rack-protection-2.0.5/lib/rack/protection/path_traversal.rb:16:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/rack-protection-2.0.5/lib/rack/protection/json_csrf.rb:26:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/rack-protection-2.0.5/lib/rack/protection/base.rb:50:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/rack-protection-2.0.5/lib/rack/protection/base.rb:50:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/rack-protection-2.0.5/lib/rack/protection/frame_options.rb:31:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/rack-2.0.7/lib/rack/logger.rb:15:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/rack-2.0.7/lib/rack/common_logger.rb:33:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:231:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:224:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/rack-2.0.7/lib/rack/head.rb:12:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/show_exceptions.rb:22:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:194:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1957:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1502:in `block in call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1729:in `synchronize'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1502:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/lib/thin/connection.rb:86:in `block in pre_process'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/lib/thin/connection.rb:84:in `catch'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/lib/thin/connection.rb:84:in `pre_process'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/lib/thin/connection.rb:53:in `process'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/lib/thin/connection.rb:39:in `receive_data'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/eventmachine-1.2.7/lib/eventmachine.rb:195:in `run_machine'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/eventmachine-1.2.7/lib/eventmachine.rb:195:in `run'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/lib/thin/backends/base.rb:73:in `start'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/lib/thin/server.rb:162:in `start'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/lib/thin/controllers/controller.rb:87:in `start'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/lib/thin/runner.rb:203:in `run_command'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/lib/thin/runner.rb:159:in `run!'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/bin/thin:6:in `<top (required)>'
+	/home/liyun/.rbenv/versions/2.6.1/bin/thin:23:in `load'
+	/home/liyun/.rbenv/versions/2.6.1/bin/thin:23:in `<main>'
+2019-07-31 19:15:56.090316 [36mI[0m [8868:47259974687080] [36mLy::App[0m --  => {}
+2019-07-31 19:15:56.095020 [36mI[0m [8868:47259974687080] [36mAccess[0m -- 192.168.221.1 - - [31/Jul/2019:19:15:56 -0700] "GET /__sinatra__/500.png HTTP/1.1" 200 24378 0.0054
+
+2019-07-31 19:19:39.882835 [36mI[0m [9382:47206200760680] [36mLy::App[0m --  => {"id"=>"1"}
+2019-07-31 19:19:39.882951 [36mI[0m [9382:47206200760680] [36mLy::App[0m -- { "id"[0;37m => [0m[0;33m"1"[0m }
+2019-07-31 19:19:39.899417 [31mE[0m [9382:47206200760680 logger.rb:12] [31mError[0m -- 2019-07-31 19:19:39 - ActiveRecord::SubclassNotFound - The single-table inheritance mechanism failed to locate the subclass: 'kh'. This error is raised because the column 'type' is reserved for storing the class in case of inheritance. Please rename this column if you didn't intend it to be used for storing the inheritance class or overwrite Ly::Book.inheritance_column to use another column for that information.:
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/inheritance.rb:226:in `rescue in find_sti_class'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/inheritance.rb:219:in `find_sti_class'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/inheritance.rb:207:in `discriminate_class_for_record'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/persistence.rb:69:in `instantiate'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/querying.rb:52:in `block (2 levels) in find_by_sql'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/result.rb:57:in `block in each'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/result.rb:57:in `each'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/result.rb:57:in `each'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/querying.rb:52:in `map'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/querying.rb:52:in `block in find_by_sql'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/querying.rb:51:in `find_by_sql'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/statement_cache.rb:108:in `execute'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/core.rb:208:in `find_by'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/dynamic_matchers.rb:66:in `find_by_id'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/dynamic_matchers.rb:20:in `method_missing'
+	/home/liyun/www/sinatra_demo/app.rb:44:in `block in <class:App>'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1635:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1635:in `block in compile!'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:992:in `block (3 levels) in route!'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1011:in `route_eval'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:992:in `block (2 levels) in route!'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1040:in `block in process_route'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1038:in `catch'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1038:in `process_route'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:990:in `block in route!'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:989:in `each'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:989:in `route!'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1097:in `block in dispatch!'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `block in invoke'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `catch'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `invoke'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1094:in `dispatch!'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:924:in `block in call!'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `block in invoke'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `catch'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `invoke'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:924:in `call!'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:913:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/rack-2.0.7/lib/rack/common_logger.rb:33:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:231:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/rack-protection-2.0.5/lib/rack/protection/xss_header.rb:18:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/rack-protection-2.0.5/lib/rack/protection/path_traversal.rb:16:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/rack-protection-2.0.5/lib/rack/protection/json_csrf.rb:26:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/rack-protection-2.0.5/lib/rack/protection/base.rb:50:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/rack-protection-2.0.5/lib/rack/protection/base.rb:50:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/rack-protection-2.0.5/lib/rack/protection/frame_options.rb:31:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/rack-2.0.7/lib/rack/logger.rb:15:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/rack-2.0.7/lib/rack/common_logger.rb:33:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:231:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:224:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/rack-2.0.7/lib/rack/head.rb:12:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/show_exceptions.rb:22:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:194:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1957:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1502:in `block in call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1729:in `synchronize'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1502:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/lib/thin/connection.rb:86:in `block in pre_process'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/lib/thin/connection.rb:84:in `catch'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/lib/thin/connection.rb:84:in `pre_process'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/lib/thin/connection.rb:53:in `process'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/lib/thin/connection.rb:39:in `receive_data'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/eventmachine-1.2.7/lib/eventmachine.rb:195:in `run_machine'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/eventmachine-1.2.7/lib/eventmachine.rb:195:in `run'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/lib/thin/backends/base.rb:73:in `start'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/lib/thin/server.rb:162:in `start'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/lib/thin/controllers/controller.rb:87:in `start'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/lib/thin/runner.rb:203:in `run_command'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/lib/thin/runner.rb:159:in `run!'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/bin/thin:6:in `<top (required)>'
+	/home/liyun/.rbenv/versions/2.6.1/bin/thin:23:in `load'
+	/home/liyun/.rbenv/versions/2.6.1/bin/thin:23:in `<main>'
+2019-07-31 19:21:07.290597 [36mI[0m [9477:47273133496680] [36mLy::App[0m --  => {"id"=>"1"}
+2019-07-31 19:21:07.290831 [36mI[0m [9477:47273133496680] [36mLy::App[0m -- { "id"[0;37m => [0m[0;33m"1"[0m }
+2019-07-31 19:21:07.309970 [31mE[0m [9477:47273133496680 logger.rb:12] [31mError[0m -- 2019-07-31 19:21:07 - ActiveRecord::SubclassNotFound - The single-table inheritance mechanism failed to locate the subclass: 'kh'. This error is raised because the column 'type' is reserved for storing the class in case of inheritance. Please rename this column if you didn't intend it to be used for storing the inheritance class or overwrite Ly::Book.inheritance_column to use another column for that information.:
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/inheritance.rb:226:in `rescue in find_sti_class'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/inheritance.rb:219:in `find_sti_class'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/inheritance.rb:207:in `discriminate_class_for_record'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/persistence.rb:69:in `instantiate'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/querying.rb:52:in `block (2 levels) in find_by_sql'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/result.rb:57:in `block in each'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/result.rb:57:in `each'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/result.rb:57:in `each'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/querying.rb:52:in `map'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/querying.rb:52:in `block in find_by_sql'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/querying.rb:51:in `find_by_sql'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/statement_cache.rb:108:in `execute'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/core.rb:208:in `find_by'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/dynamic_matchers.rb:66:in `find_by_id'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/dynamic_matchers.rb:20:in `method_missing'
+	/home/liyun/www/sinatra_demo/app.rb:44:in `block in <class:App>'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1635:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1635:in `block in compile!'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:992:in `block (3 levels) in route!'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1011:in `route_eval'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:992:in `block (2 levels) in route!'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1040:in `block in process_route'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1038:in `catch'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1038:in `process_route'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:990:in `block in route!'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:989:in `each'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:989:in `route!'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1097:in `block in dispatch!'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `block in invoke'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `catch'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `invoke'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1094:in `dispatch!'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:924:in `block in call!'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `block in invoke'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `catch'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `invoke'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:924:in `call!'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:913:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/rack-2.0.7/lib/rack/common_logger.rb:33:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:231:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/rack-protection-2.0.5/lib/rack/protection/xss_header.rb:18:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/rack-protection-2.0.5/lib/rack/protection/path_traversal.rb:16:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/rack-protection-2.0.5/lib/rack/protection/json_csrf.rb:26:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/rack-protection-2.0.5/lib/rack/protection/base.rb:50:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/rack-protection-2.0.5/lib/rack/protection/base.rb:50:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/rack-protection-2.0.5/lib/rack/protection/frame_options.rb:31:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/rack-2.0.7/lib/rack/logger.rb:15:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/rack-2.0.7/lib/rack/common_logger.rb:33:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:231:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:224:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/rack-2.0.7/lib/rack/head.rb:12:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/show_exceptions.rb:22:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:194:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1957:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1502:in `block in call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1729:in `synchronize'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1502:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/lib/thin/connection.rb:86:in `block in pre_process'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/lib/thin/connection.rb:84:in `catch'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/lib/thin/connection.rb:84:in `pre_process'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/lib/thin/connection.rb:53:in `process'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/lib/thin/connection.rb:39:in `receive_data'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/eventmachine-1.2.7/lib/eventmachine.rb:195:in `run_machine'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/eventmachine-1.2.7/lib/eventmachine.rb:195:in `run'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/lib/thin/backends/base.rb:73:in `start'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/lib/thin/server.rb:162:in `start'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/lib/thin/controllers/controller.rb:87:in `start'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/lib/thin/runner.rb:203:in `run_command'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/lib/thin/runner.rb:159:in `run!'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/bin/thin:6:in `<top (required)>'
+	/home/liyun/.rbenv/versions/2.6.1/bin/thin:23:in `load'
+	/home/liyun/.rbenv/versions/2.6.1/bin/thin:23:in `<main>'
+2019-07-31 19:22:51.704339 [36mI[0m [9746:47079477803360] [36mLy::App[0m --  => {"id"=>"1"}
+2019-07-31 19:22:51.704488 [36mI[0m [9746:47079477803360] [36mLy::App[0m -- { "id"[0;37m => [0m[0;33m"1"[0m }
+2019-07-31 19:22:51.724224 [31mE[0m [9746:47079477803360 logger.rb:12] [31mError[0m -- 2019-07-31 19:22:51 - ActiveRecord::SubclassNotFound - The single-table inheritance mechanism failed to locate the subclass: 'kh'. This error is raised because the column 'type' is reserved for storing the class in case of inheritance. Please rename this column if you didn't intend it to be used for storing the inheritance class or overwrite Ly::Book.inheritance_column to use another column for that information.:
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/inheritance.rb:226:in `rescue in find_sti_class'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/inheritance.rb:219:in `find_sti_class'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/inheritance.rb:207:in `discriminate_class_for_record'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/persistence.rb:69:in `instantiate'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/querying.rb:52:in `block (2 levels) in find_by_sql'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/result.rb:57:in `block in each'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/result.rb:57:in `each'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/result.rb:57:in `each'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/querying.rb:52:in `map'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/querying.rb:52:in `block in find_by_sql'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/querying.rb:51:in `find_by_sql'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/statement_cache.rb:108:in `execute'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/core.rb:208:in `find_by'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/dynamic_matchers.rb:66:in `find_by_id'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/dynamic_matchers.rb:20:in `method_missing'
+	/home/liyun/www/sinatra_demo/app.rb:44:in `block in <class:App>'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1635:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1635:in `block in compile!'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:992:in `block (3 levels) in route!'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1011:in `route_eval'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:992:in `block (2 levels) in route!'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1040:in `block in process_route'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1038:in `catch'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1038:in `process_route'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:990:in `block in route!'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:989:in `each'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:989:in `route!'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1097:in `block in dispatch!'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `block in invoke'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `catch'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `invoke'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1094:in `dispatch!'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:924:in `block in call!'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `block in invoke'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `catch'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `invoke'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:924:in `call!'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:913:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/rack-2.0.7/lib/rack/common_logger.rb:33:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:231:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/rack-protection-2.0.5/lib/rack/protection/xss_header.rb:18:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/rack-protection-2.0.5/lib/rack/protection/path_traversal.rb:16:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/rack-protection-2.0.5/lib/rack/protection/json_csrf.rb:26:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/rack-protection-2.0.5/lib/rack/protection/base.rb:50:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/rack-protection-2.0.5/lib/rack/protection/base.rb:50:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/rack-protection-2.0.5/lib/rack/protection/frame_options.rb:31:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/rack-2.0.7/lib/rack/logger.rb:15:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/rack-2.0.7/lib/rack/common_logger.rb:33:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:231:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:224:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/rack-2.0.7/lib/rack/head.rb:12:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/show_exceptions.rb:22:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:194:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1957:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1502:in `block in call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1729:in `synchronize'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1502:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/lib/thin/connection.rb:86:in `block in pre_process'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/lib/thin/connection.rb:84:in `catch'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/lib/thin/connection.rb:84:in `pre_process'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/lib/thin/connection.rb:53:in `process'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/lib/thin/connection.rb:39:in `receive_data'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/eventmachine-1.2.7/lib/eventmachine.rb:195:in `run_machine'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/eventmachine-1.2.7/lib/eventmachine.rb:195:in `run'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/lib/thin/backends/base.rb:73:in `start'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/lib/thin/server.rb:162:in `start'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/lib/thin/controllers/controller.rb:87:in `start'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/lib/thin/runner.rb:203:in `run_command'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/lib/thin/runner.rb:159:in `run!'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/bin/thin:6:in `<top (required)>'
+	/home/liyun/.rbenv/versions/2.6.1/bin/thin:23:in `load'
+	/home/liyun/.rbenv/versions/2.6.1/bin/thin:23:in `<main>'
+2019-07-31 19:23:28.788410 [36mI[0m [9797:47174418741600] [36mLy::App[0m --  => {"id"=>"1"}
+2019-07-31 19:23:28.788523 [36mI[0m [9797:47174418741600] [36mLy::App[0m -- { "id"[0;37m => [0m[0;33m"1"[0m }
+2019-07-31 19:23:28.809396 [31mE[0m [9797:47174418741600 logger.rb:12] [31mError[0m -- 2019-07-31 19:23:28 - ActiveRecord::SubclassNotFound - The single-table inheritance mechanism failed to locate the subclass: 'kh'. This error is raised because the column 'type' is reserved for storing the class in case of inheritance. Please rename this column if you didn't intend it to be used for storing the inheritance class or overwrite Ly::Book.inheritance_column to use another column for that information.:
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/inheritance.rb:226:in `rescue in find_sti_class'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/inheritance.rb:219:in `find_sti_class'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/inheritance.rb:207:in `discriminate_class_for_record'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/persistence.rb:69:in `instantiate'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/querying.rb:52:in `block (2 levels) in find_by_sql'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/result.rb:57:in `block in each'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/result.rb:57:in `each'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/result.rb:57:in `each'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/querying.rb:52:in `map'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/querying.rb:52:in `block in find_by_sql'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/querying.rb:51:in `find_by_sql'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/statement_cache.rb:108:in `execute'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/core.rb:208:in `find_by'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/dynamic_matchers.rb:66:in `find_by_id'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/dynamic_matchers.rb:20:in `method_missing'
+	/home/liyun/www/sinatra_demo/app.rb:45:in `block in <class:App>'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1635:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1635:in `block in compile!'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:992:in `block (3 levels) in route!'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1011:in `route_eval'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:992:in `block (2 levels) in route!'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1040:in `block in process_route'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1038:in `catch'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1038:in `process_route'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:990:in `block in route!'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:989:in `each'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:989:in `route!'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1097:in `block in dispatch!'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `block in invoke'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `catch'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `invoke'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1094:in `dispatch!'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:924:in `block in call!'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `block in invoke'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `catch'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `invoke'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:924:in `call!'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:913:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/rack-2.0.7/lib/rack/common_logger.rb:33:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:231:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/rack-protection-2.0.5/lib/rack/protection/xss_header.rb:18:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/rack-protection-2.0.5/lib/rack/protection/path_traversal.rb:16:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/rack-protection-2.0.5/lib/rack/protection/json_csrf.rb:26:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/rack-protection-2.0.5/lib/rack/protection/base.rb:50:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/rack-protection-2.0.5/lib/rack/protection/base.rb:50:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/rack-protection-2.0.5/lib/rack/protection/frame_options.rb:31:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/rack-2.0.7/lib/rack/logger.rb:15:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/rack-2.0.7/lib/rack/common_logger.rb:33:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:231:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:224:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/rack-2.0.7/lib/rack/head.rb:12:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/show_exceptions.rb:22:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:194:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1957:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1502:in `block in call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1729:in `synchronize'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1502:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/lib/thin/connection.rb:86:in `block in pre_process'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/lib/thin/connection.rb:84:in `catch'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/lib/thin/connection.rb:84:in `pre_process'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/lib/thin/connection.rb:53:in `process'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/lib/thin/connection.rb:39:in `receive_data'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/eventmachine-1.2.7/lib/eventmachine.rb:195:in `run_machine'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/eventmachine-1.2.7/lib/eventmachine.rb:195:in `run'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/lib/thin/backends/base.rb:73:in `start'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/lib/thin/server.rb:162:in `start'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/lib/thin/controllers/controller.rb:87:in `start'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/lib/thin/runner.rb:203:in `run_command'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/lib/thin/runner.rb:159:in `run!'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/bin/thin:6:in `<top (required)>'
+	/home/liyun/.rbenv/versions/2.6.1/bin/thin:23:in `load'
+	/home/liyun/.rbenv/versions/2.6.1/bin/thin:23:in `<main>'
+2019-07-31 19:23:29.110186 [36mI[0m [9797:47174418741600] [36mLy::App[0m --  => {"id"=>"1"}
+2019-07-31 19:23:29.110303 [36mI[0m [9797:47174418741600] [36mLy::App[0m -- { "id"[0;37m => [0m[0;33m"1"[0m }
+2019-07-31 19:23:29.112565 [31mE[0m [9797:47174418741600 logger.rb:12] [31mError[0m -- 2019-07-31 19:23:29 - ActiveRecord::SubclassNotFound - The single-table inheritance mechanism failed to locate the subclass: 'kh'. This error is raised because the column 'type' is reserved for storing the class in case of inheritance. Please rename this column if you didn't intend it to be used for storing the inheritance class or overwrite Ly::Book.inheritance_column to use another column for that information.:
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/inheritance.rb:226:in `rescue in find_sti_class'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/inheritance.rb:219:in `find_sti_class'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/inheritance.rb:207:in `discriminate_class_for_record'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/persistence.rb:69:in `instantiate'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/querying.rb:52:in `block (2 levels) in find_by_sql'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/result.rb:57:in `block in each'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/result.rb:57:in `each'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/result.rb:57:in `each'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/querying.rb:52:in `map'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/querying.rb:52:in `block in find_by_sql'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/querying.rb:51:in `find_by_sql'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/statement_cache.rb:108:in `execute'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/core.rb:208:in `find_by'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/dynamic_matchers.rb:66:in `find_by_id'
+	/home/liyun/www/sinatra_demo/app.rb:45:in `block in <class:App>'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1635:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1635:in `block in compile!'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:992:in `block (3 levels) in route!'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1011:in `route_eval'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:992:in `block (2 levels) in route!'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1040:in `block in process_route'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1038:in `catch'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1038:in `process_route'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:990:in `block in route!'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:989:in `each'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:989:in `route!'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1097:in `block in dispatch!'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `block in invoke'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `catch'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `invoke'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1094:in `dispatch!'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:924:in `block in call!'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `block in invoke'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `catch'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `invoke'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:924:in `call!'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:913:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/rack-2.0.7/lib/rack/common_logger.rb:33:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:231:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/rack-protection-2.0.5/lib/rack/protection/xss_header.rb:18:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/rack-protection-2.0.5/lib/rack/protection/path_traversal.rb:16:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/rack-protection-2.0.5/lib/rack/protection/json_csrf.rb:26:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/rack-protection-2.0.5/lib/rack/protection/base.rb:50:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/rack-protection-2.0.5/lib/rack/protection/base.rb:50:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/rack-protection-2.0.5/lib/rack/protection/frame_options.rb:31:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/rack-2.0.7/lib/rack/logger.rb:15:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/rack-2.0.7/lib/rack/common_logger.rb:33:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:231:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:224:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/rack-2.0.7/lib/rack/head.rb:12:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/show_exceptions.rb:22:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:194:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1957:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1502:in `block in call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1729:in `synchronize'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1502:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/lib/thin/connection.rb:86:in `block in pre_process'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/lib/thin/connection.rb:84:in `catch'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/lib/thin/connection.rb:84:in `pre_process'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/lib/thin/connection.rb:53:in `process'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/lib/thin/connection.rb:39:in `receive_data'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/eventmachine-1.2.7/lib/eventmachine.rb:195:in `run_machine'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/eventmachine-1.2.7/lib/eventmachine.rb:195:in `run'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/lib/thin/backends/base.rb:73:in `start'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/lib/thin/server.rb:162:in `start'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/lib/thin/controllers/controller.rb:87:in `start'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/lib/thin/runner.rb:203:in `run_command'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/lib/thin/runner.rb:159:in `run!'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/bin/thin:6:in `<top (required)>'
+	/home/liyun/.rbenv/versions/2.6.1/bin/thin:23:in `load'
+	/home/liyun/.rbenv/versions/2.6.1/bin/thin:23:in `<main>'
+2019-07-31 19:28:27.614699 [36mI[0m [10534:47031808612700] [36mLy::App[0m --  => {"id"=>"1"}
+2019-07-31 19:28:27.615114 [36mI[0m [10534:47031808612700] [36mLy::App[0m -- { "id"[0;37m => [0m[0;33m"1"[0m }
+2019-07-31 19:28:27.659259 [31mE[0m [10534:47031808612700 logger.rb:12] [31mError[0m -- 2019-07-31 19:28:27 - NameError - undefined local variable or method `book' for #<Ly::App:0x0000558ce6369048>:
+	/home/liyun/www/sinatra_demo/app.rb:47:in `block in <class:App>'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1635:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1635:in `block in compile!'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:992:in `block (3 levels) in route!'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1011:in `route_eval'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:992:in `block (2 levels) in route!'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1040:in `block in process_route'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1038:in `catch'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1038:in `process_route'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:990:in `block in route!'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:989:in `each'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:989:in `route!'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1097:in `block in dispatch!'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `block in invoke'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `catch'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `invoke'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1094:in `dispatch!'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:924:in `block in call!'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `block in invoke'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `catch'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1076:in `invoke'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:924:in `call!'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:913:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/rack-2.0.7/lib/rack/common_logger.rb:33:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:231:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/rack-protection-2.0.5/lib/rack/protection/xss_header.rb:18:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/rack-protection-2.0.5/lib/rack/protection/path_traversal.rb:16:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/rack-protection-2.0.5/lib/rack/protection/json_csrf.rb:26:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/rack-protection-2.0.5/lib/rack/protection/base.rb:50:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/rack-protection-2.0.5/lib/rack/protection/base.rb:50:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/rack-protection-2.0.5/lib/rack/protection/frame_options.rb:31:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/rack-2.0.7/lib/rack/logger.rb:15:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/rack-2.0.7/lib/rack/common_logger.rb:33:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:231:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:224:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/rack-2.0.7/lib/rack/head.rb:12:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/show_exceptions.rb:22:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:194:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1957:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1502:in `block in call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1729:in `synchronize'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/sinatra-2.0.5/lib/sinatra/base.rb:1502:in `call'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/lib/thin/connection.rb:86:in `block in pre_process'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/lib/thin/connection.rb:84:in `catch'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/lib/thin/connection.rb:84:in `pre_process'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/lib/thin/connection.rb:53:in `process'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/lib/thin/connection.rb:39:in `receive_data'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/eventmachine-1.2.7/lib/eventmachine.rb:195:in `run_machine'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/eventmachine-1.2.7/lib/eventmachine.rb:195:in `run'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/lib/thin/backends/base.rb:73:in `start'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/lib/thin/server.rb:162:in `start'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/lib/thin/controllers/controller.rb:87:in `start'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/lib/thin/runner.rb:203:in `run_command'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/lib/thin/runner.rb:159:in `run!'
+	/home/liyun/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/thin-1.7.2/bin/thin:6:in `<top (required)>'
+	/home/liyun/.rbenv/versions/2.6.1/bin/thin:23:in `load'
+	/home/liyun/.rbenv/versions/2.6.1/bin/thin:23:in `<main>'
+2019-07-31 19:28:55.531630 [36mI[0m [10582:47373850016100] [36mLy::App[0m --  => {"id"=>"1"}
+2019-07-31 19:28:55.531757 [36mI[0m [10582:47373850016100] [36mLy::App[0m -- { "id"[0;37m => [0m[0;33m"1"[0m }
+2019-07-31 19:28:55.562942 [36mI[0m [10582:47373850016100] [36mAccess[0m -- 192.168.221.1 - - [31/Jul/2019:19:28:55 -0700] "GET /book/show?id=1 HTTP/1.1" 204 - 0.0341
+
+2019-07-31 19:29:08.519090 [36mI[0m [10582:47373850016100] [36mLy::App[0m --  => {"id"=>"1"}
+2019-07-31 19:29:08.519279 [36mI[0m [10582:47373850016100] [36mLy::App[0m -- { "id"[0;37m => [0m[0;33m"1"[0m }
+2019-07-31 19:29:08.521533 [36mI[0m [10582:47373850016100] [36mAccess[0m -- 192.168.221.1 - - [31/Jul/2019:19:29:08 -0700] "GET /book/show?id=1 HTTP/1.1" 204 - 0.0030
+
+2019-07-31 19:29:24.771616 [36mI[0m [10582:47373850016100] [36mLy::App[0m --  => {"id"=>"2"}
+2019-07-31 19:29:24.771732 [36mI[0m [10582:47373850016100] [36mLy::App[0m -- { "id"[0;37m => [0m[0;33m"2"[0m }
+2019-07-31 19:29:24.773428 [36mI[0m [10582:47373850016100] [36mAccess[0m -- 192.168.221.1 - - [31/Jul/2019:19:29:24 -0700] "GET /book/show?id=2 HTTP/1.1" 204 - 0.0022
+
+2019-07-31 19:29:31.263130 [36mI[0m [10582:47373850016100] [36mLy::App[0m --  => {"id"=>"1"}
+2019-07-31 19:29:31.263246 [36mI[0m [10582:47373850016100] [36mLy::App[0m -- { "id"[0;37m => [0m[0;33m"1"[0m }
+2019-07-31 19:29:31.264942 [36mI[0m [10582:47373850016100] [36mAccess[0m -- 192.168.221.1 - - [31/Jul/2019:19:29:31 -0700] "GET /book/show?id=1 HTTP/1.1" 204 - 0.0022
+
+2019-07-31 19:32:10.464632 [36mI[0m [10665:47395471661400] [36mLy::App[0m --  => {"id"=>"1"}
+2019-07-31 19:32:10.464805 [36mI[0m [10665:47395471661400] [36mLy::App[0m -- { "id"[0;37m => [0m[0;33m"1"[0m }
+2019-07-31 19:32:10.486325 [36mI[0m [10665:47395471661400] [36mAccess[0m -- 192.168.221.1 - - [31/Jul/2019:19:32:10 -0700] "GET /book/show?id=1 HTTP/1.1" 204 - 0.0256
+
+2019-07-31 19:32:21.864866 [36mI[0m [10665:47395471661400] [36mLy::App[0m --  => {}
+2019-07-31 19:32:21.867113 [36mI[0m [10665:47395471661400] [36mAccess[0m -- 192.168.221.1 - - [31/Jul/2019:19:32:21 -0700] "GET /book/ HTTP/1.1" 404 14 0.0027
+
+2019-07-31 19:32:37.146908 [36mI[0m [10665:47395471661400] [36mLy::App[0m --  => {"id"=>"1"}
+2019-07-31 19:32:37.147001 [36mI[0m [10665:47395471661400] [36mLy::App[0m -- { "id"[0;37m => [0m[0;33m"1"[0m }
+2019-07-31 19:32:37.148651 [36mI[0m [10665:47395471661400] [36mAccess[0m -- 192.168.221.1 - - [31/Jul/2019:19:32:37 -0700] "GET /book/show?id=1 HTTP/1.1" 204 - 0.0022
+
+2019-07-31 19:32:46.086076 [36mI[0m [10665:47395471661400] [36mLy::App[0m --  => {"id"=>"1"}
+2019-07-31 19:32:46.086218 [36mI[0m [10665:47395471661400] [36mLy::App[0m -- { "id"[0;37m => [0m[0;33m"1"[0m }
+2019-07-31 19:32:46.087580 [36mI[0m [10665:47395471661400] [36mAccess[0m -- 192.168.221.1 - - [31/Jul/2019:19:32:46 -0700] "GET /book/show?id=1 HTTP/1.1" 204 - 0.0019
+
+2019-07-31 19:32:48.884377 [36mI[0m [10665:47395471661400] [36mLy::App[0m --  => {}
+2019-07-31 19:32:48.885105 [36mI[0m [10665:47395471661400] [36mAccess[0m -- 192.168.221.1 - - [31/Jul/2019:19:32:48 -0700] "GET /book/ HTTP/1.1" 404 14 0.0013
+
+2019-07-31 19:32:59.715222 [36mI[0m [10665:47395471661400] [36mLy::App[0m --  => {"id"=>"1"}
+2019-07-31 19:32:59.715454 [36mI[0m [10665:47395471661400] [36mLy::App[0m -- { "id"[0;37m => [0m[0;33m"1"[0m }
+2019-07-31 19:32:59.716873 [36mI[0m [10665:47395471661400] [36mAccess[0m -- 192.168.221.1 - - [31/Jul/2019:19:32:59 -0700] "GET /book/show?id=1 HTTP/1.1" 204 - 0.0020
+
+2019-07-31 19:33:03.343884 [36mI[0m [10665:47395471661400] [36mLy::App[0m --  => {}
+2019-07-31 19:33:03.344382 [36mI[0m [10665:47395471661400] [36mAccess[0m -- 192.168.221.1 - - [31/Jul/2019:19:33:03 -0700] "GET /book/ HTTP/1.1" 404 14 0.0010
+
+2019-07-31 19:33:03.519350 [36mI[0m [10665:47395471661400] [36mLy::App[0m --  => {}
+2019-07-31 19:33:03.519891 [36mI[0m [10665:47395471661400] [36mAccess[0m -- 192.168.221.1 - - [31/Jul/2019:19:33:03 -0700] "GET /book/ HTTP/1.1" 404 14 0.0010
+
+2019-07-31 19:33:03.706752 [36mI[0m [10665:47395471661400] [36mLy::App[0m --  => {}
+2019-07-31 19:33:03.707454 [36mI[0m [10665:47395471661400] [36mAccess[0m -- 192.168.221.1 - - [31/Jul/2019:19:33:03 -0700] "GET /book/ HTTP/1.1" 404 14 0.0013
+
+2019-07-31 19:33:03.886953 [36mI[0m [10665:47395471661400] [36mLy::App[0m --  => {}
+2019-07-31 19:33:03.887464 [36mI[0m [10665:47395471661400] [36mAccess[0m -- 192.168.221.1 - - [31/Jul/2019:19:33:03 -0700] "GET /book/ HTTP/1.1" 404 14 0.0010
+
+2019-07-31 19:33:06.239854 [36mI[0m [10665:47395471661400] [36mLy::App[0m --  => {}
+2019-07-31 19:33:06.240194 [36mI[0m [10665:47395471661400] [36mAccess[0m -- 192.168.221.1 - - [31/Jul/2019:19:33:06 -0700] "GET / HTTP/1.1" 200 12 0.0006
+
+2019-07-31 19:33:26.480375 [36mI[0m [10729:47246694488420] [36mLy::App[0m --  => {}
+2019-07-31 19:33:26.482475 [36mI[0m [10729:47246694488420] [36mAccess[0m -- 192.168.221.1 - - [31/Jul/2019:19:33:26 -0700] "GET / HTTP/1.1" 200 12 0.0051
+
+2019-07-31 19:33:39.031505 [36mI[0m [10729:47246694488420] [36mLy::App[0m --  => {"id"=>"1"}
+2019-07-31 19:33:39.031604 [36mI[0m [10729:47246694488420] [36mLy::App[0m -- { "id"[0;37m => [0m[0;33m"1"[0m }
+2019-07-31 19:33:39.059850 [36mI[0m [10729:47246694488420] [36mAccess[0m -- 192.168.221.1 - - [31/Jul/2019:19:33:39 -0700] "GET /book/show?id=1 HTTP/1.1" 204 - 0.0289
+
+2019-07-31 19:34:23.290971 [36mI[0m [10729:47246694488420] [36mLy::App[0m --  => {"id"=>"1"}
+2019-07-31 19:34:23.291122 [36mI[0m [10729:47246694488420] [36mLy::App[0m -- { "id"[0;37m => [0m[0;33m"1"[0m }
+2019-07-31 19:34:23.293723 [36mI[0m [10729:47246694488420] [36mAccess[0m -- 192.168.221.1 - - [31/Jul/2019:19:34:23 -0700] "GET /book/show?id=1 HTTP/1.1" 200 - 0.0478
+
+2019-07-31 19:43:01.700533 [36mI[0m [10970:47339043821920] [36mLy::App[0m --  => {}
+2019-07-31 19:43:01.702454 [36mI[0m [10970:47339043821920] [36mAccess[0m -- 192.168.221.1 - - [31/Jul/2019:19:43:01 -0700] "GET /book/ HTTP/1.1" 404 14 0.0049
+
+2019-07-31 19:44:11.649966 [36mI[0m [10970:47339043821920] [36mLy::App[0m --  => {}
+2019-07-31 19:44:11.650574 [36mI[0m [10970:47339043821920] [36mLy::App[0m -- page not found}
+2019-07-31 19:44:11.650863 [36mI[0m [10970:47339043821920] [36mAccess[0m -- 192.168.221.1 - - [31/Jul/2019:19:44:11 -0700] "GET /book/ HTTP/1.1" 404 14 0.0368
+

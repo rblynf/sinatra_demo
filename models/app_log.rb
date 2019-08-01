@@ -1,6 +1,7 @@
 module Ly
   class AppLog < Base
     def self.warn(msg)
+      p "111"
       create! ex_msg: msg, ex_type: :warn
     end
 
